@@ -1,0 +1,15 @@
+dbtlearn:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      user: commander
+      host: 127.0.0.1
+      port: 8080
+      database: analytics
+      schema: public
+      threads: 8
+      http_scheme: http
+      session_properties:
+        query_max_run_time: 5d
+        exchange_compression: True
